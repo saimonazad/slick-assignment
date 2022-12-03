@@ -6,11 +6,11 @@ import { getBusinessById } from "../../services";
 import ErrorModal from "../shared/ErrorModal";
 import columns from "./Columns";
 
-function BusinessList() {
-  const [modalShow, setModalShow] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [modalTitle, setModalTitle] = useState("Business");
-  const [showError, setShowError] = useState(false);
+const BusinessList = () => {
+  const [modalShow, setModalShow] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [modalTitle, setModalTitle] = useState<string>("Business");
+  const [showError, setShowError] = useState<boolean>(false);
   const [individualBusinessData, setIndividualBusinessData] = useState<
     Business | undefined
   >(undefined);
@@ -52,5 +52,5 @@ function BusinessList() {
       <ErrorModal showErrorModal={showError} setShowErrorModal={setShowError} />
     </>
   );
-}
+};
 export default BusinessList;

@@ -1,4 +1,4 @@
-export default [
+const columns = [
   {
     name: "Id",
     selector: (row: Business) => row.id,
@@ -25,3 +25,4 @@ export default [
     sortable: true,
   },
 ];
+export default columns;

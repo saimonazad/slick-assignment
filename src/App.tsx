@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import BusinessList from "./components/BusinessList/BusinessList";
 import Navbar from "./components/NavBar";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Navbar />
@@ -12,6 +12,6 @@ function App() {
       </Container>
     </div>
   );
-}
+};
 
 export default App;

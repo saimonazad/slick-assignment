@@ -1,4 +1,3 @@
-
 import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/esm/Spinner";
 import Modal from "react-bootstrap/Modal";
@@ -27,7 +26,7 @@ const CenteredModal = (props: CenteredModalProps) => {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter" className="h5">
           {props.title}
         </Modal.Title>
       </Modal.Header>
@@ -55,15 +54,13 @@ const CenteredModal = (props: CenteredModalProps) => {
 
 const BsModal = ({ modalShow, setModalShow, title, loading, data }: Props) => {
   return (
-    <>
-      <CenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        title={title}
-        loading={loading}
-        data={data}
-      />
-    </>
+    <CenteredModal
+      show={modalShow}
+      onHide={() => setModalShow(false)}
+      title={title}
+      loading={loading}
+      data={data}
+    />
   );
 };
 

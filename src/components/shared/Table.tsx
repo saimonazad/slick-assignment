@@ -8,8 +8,33 @@ interface TableProps {
   loading: boolean;
   OnClickRow?: any;
 }
+const customStyles = {
+  rows: {
+    style: {
+      borderLeft: "1px solid",
+      borderRight: "1px solid",
+      borderBottom: "1px solid",
+    },
+  },
+  headCells: {
+    style: {
+      paddingLeft: "8px",
+      paddingRight: "8px",
+      backgroundColor: "Gray",
+      color: "white",
+      fontWeight: "bold",
+      fontSize: "1.25em",
+    },
+  },
+  cells: {
+    style: {
+      paddingLeft: "8px",
+      paddingRight: "8px",
+    },
+  },
+};
 
-function Table({ Title, Data, Column, loading, OnClickRow }: TableProps) {
+const Table = ({ Title, Data, Column, loading, OnClickRow }: TableProps) => {
   return (
     <DataTable
       title={Title}
@@ -22,7 +47,9 @@ function Table({ Title, Data, Column, loading, OnClickRow }: TableProps) {
       pointerOnHover={true}
       progressPending={loading}
       progressComponent={<Spinner animation="border" />}
+      highlightOnHover
+      customStyles={customStyles}
     />
   );
-}
+};
 export default Table;

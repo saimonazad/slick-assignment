@@ -4,7 +4,7 @@ interface Props {
   showErrorModal: boolean;
   setShowErrorModal: Function;
 }
-function ErrorModal({ showErrorModal, setShowErrorModal }: Props) {
+const ErrorModal = ({ showErrorModal, setShowErrorModal }: Props) => {
   return (
     <Toast
       onClose={() => setShowErrorModal(false)}
@@ -19,6 +19,6 @@ function ErrorModal({ showErrorModal, setShowErrorModal }: Props) {
       <Toast.Body>Something Happened!</Toast.Body>
     </Toast>
   );
-}
+};
 
 export default ErrorModal;
