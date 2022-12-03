@@ -15,7 +15,7 @@ function BusinessList() {
     Business | undefined
   >(undefined);
 
-  const [{ data, loading: businessListLoading, error }, refetch] = useAxios(
+  const [{ data, loading: businessListLoading }] = useAxios(
     "/businesses?verbose=true"
   );
 

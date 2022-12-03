@@ -1,14 +1,7 @@
-import {
-  DetailedHTMLProps,
-  HTMLAttributes,
-  RefObject,
-  ReactNode,
-  MouseEventHandler,
-} from "react";
+
 import Button from "react-bootstrap/Button";
-import { Omit, BsPrefixProps } from "react-bootstrap/esm/helpers";
 import Spinner from "react-bootstrap/esm/Spinner";
-import Modal, { ModalProps } from "react-bootstrap/Modal";
+import Modal from "react-bootstrap/Modal";
 
 interface Props {
   modalShow: boolean;
